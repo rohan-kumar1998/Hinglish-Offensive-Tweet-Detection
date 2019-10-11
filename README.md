@@ -41,8 +41,7 @@ We take concatenate the pre-final layers of the above two models, and pass it th
 <img src="https://github.com/rohan-kumar1998/Hinglish-Offensive-Tweet-Detection/blob/master/Images/WoT/RNN_CNN/Screenshot_2019-10-11%20Google%20Colaboratory(3).png" width="400"> <img src ="https://github.com/rohan-kumar1998/Hinglish-Offensive-Tweet-Detection/blob/master/Images/WT/RNN_CNN/Screenshot_2019-10-11%20Google%20Colaboratory(3).png" width ="390"> 
 <div style="text-align:center">
 <p align="center"> 
-  <img src="https://github.com/rohan-kumar1998/Hinglish-Offensive-Tweet-Detection/blob/master/Images/ENSEMBLE.png"   width="400" >  
- Fig - RNN+ GRU architecture
+  <img src="https://github.com/rohan-kumar1998/Hinglish-Offensive-Tweet-Detection/blob/master/Images/ENSEMBLE.png"   width="400" >Fig - RNN+ GRU architecture
 </p>
 </div>
                                                                                                                            
