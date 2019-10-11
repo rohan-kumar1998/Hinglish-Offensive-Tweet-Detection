@@ -22,6 +22,9 @@ class RNNModel(nn.Module):
         self.dropout = nn.Dropout(dropout)
         
     def forward(self, src):
+        """
+    	We permute the input so the size becomes [sequence_length, batch_size] so that we can use the sequence as the time step input for the rnn.
+    	"""
         src = src.permute(1,0)
         embedded = self.embedding(src)
         output, hidden = self.rnn(embedded)
@@ -51,11 +54,19 @@ class CNNmodel(nn.Module):
         out = self.dropout(torch.cat((pooled_0, pooled_1, pooled_2), dim = 1))
         out = self.linear(out)
         return out 
-
+"""
+Difference between the code above and the code below is removal of final linear layer, Hence teh pre-final layer for GRU would look like
+[batch_size, Hidden_dimensions] whilst the prefinal layer of CNN architecture would look like [batch_size, no_of_filters*3]. Hence after 
+concatenation of these layers we get a layer of size [batch_size, 3*no_of_filers + hidden_dimension)], which we then pass it through a 
+MLP to get the outputs. 
+"""
 
 class RNN(nn.Module):
     def __init__(self, vocab_size, emb_dim, hid_dim, weights_matrix, dropout = 0.5):
         super().__init__()
+        """
+        We take in the pre-trained embeddings but don't freeze the weights, as the hinglish words might not be in the dictionary. 
+        """
         self.embedding = nn.Embedding.from_pretrained(weights_matrix, freeze = False)
         self.rnn = nn.GRU(emb_dim, hid_dim, bidirectional = True)
         self.fc = nn.Linear(2*hid_dim, 3)
@@ -102,6 +113,9 @@ class RNN_CNNmodel(nn.Module):
         self.dropout = nn.Dropout(dropout)
     
     def forward(self, x):
+        """
+    	After getting the layer as described above, we pass it through a maxpooling layer and then a linear layer again to get the output. 
+    	"""
         out1 = self.cnn(x)
         out2 = self.rnn(x)
         out = torch.cat((out1,out2), dim = 1)
