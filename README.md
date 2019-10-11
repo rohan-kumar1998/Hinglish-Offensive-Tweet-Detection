@@ -11,7 +11,7 @@ Order of executing -
 | Models        |Without Mapping          | With Mapping  |
 | ------------- |:-------------:| -----:|
 | Bidirectional GRU      | 80.52 | **82.10** |
-| CNN      | 83.47      |   **84.0** |
+| CNN      | 83.47      |   **84.00** |
 | RNN+GRU Ensemble  | **84.31**      |    83.57 |
 
 *LSTM model was also tested, but wasn't included in the results* 
