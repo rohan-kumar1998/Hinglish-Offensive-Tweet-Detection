@@ -4,6 +4,10 @@ from bs4 import BeautifulSoup
 import re 
 from nltk.tokenize import WordPunctTokenizer
 
+"""
+Remove all the links, mentions and general cleaning of data before processing, we don't remove the stopwords, but remove punctuations. 
+"""
+
 df = pd.read_csv( 'HOT_Dataset_modified.csv', index_col=None, header=None, engine='python' )
 
 cols = df.columns.tolist()
