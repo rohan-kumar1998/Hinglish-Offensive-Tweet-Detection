@@ -47,8 +47,10 @@ We take concatenate the pre-final layers of the above two models, and pass it th
  Fig - RNN+GRU architecture 
 </p>
 </div>
-                                                                                                                           
-                                                                                                                                
+
+## References 
+1. Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP), pages 1746–1751,October 25-29, 2014, Doha, Qatar.c©2014 Association for Computational LinguisticsConvolutional Neural Networks for Sentence Classification
+2. Proceedings of the Second Workshop on Abusive Language Online (ALW2), pages 138–148Brussels, Belgium, October 31, 2018.c©2018 Association for Computational Linguistics138Did you offend me?Classification of Offensive Tweets in Hinglish Language                                                                                                                                
                                                                                                                                 
                                                                                                                                 
                                                                                                                                 
