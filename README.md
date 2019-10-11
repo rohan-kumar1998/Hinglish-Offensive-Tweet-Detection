@@ -23,19 +23,20 @@ The dataset consisted of two csv files, "HOT_Dataset_modified.csv" which contain
 We consider 2 cases of mapping (onto a vector space), 
 1. We map the hindi profanities and their translation to two different vectors, and then train the models. 
 2. We map the hindi profanities and their translation to the same vector, and the train the same models. 
-We used GloVe vector space, without freeze the weights, and assigned random weights to the words which weren't in the GloVe vocabulary. 
- 
-## Bidirectional GRU 
+We used GloVe vector space, without freeze the weights, and assigned random weights to the words which weren't in the GloVe vocabulary.
+
+## Models  
+### Bidirectional GRU 
 We pass the sequence through a bidirectional GRU model, concatenate the last hidden layers (forward and backward pass) then we pass this output through a Linear layer to get the outputs. We use Binary Cross entropy with logits loss (BCE + Sigmoid) as our loss function and use Adam optimizer as the optimizer, We obtain the following confusion matrix Without Mapping and with mapping respectively. 
 
 <img src="https://github.com/rohan-kumar1998/Hinglish-Offensive-Tweet-Detection/blob/master/Images/WoT/RNN/Screenshot_2019-10-11%20Google%20Colaboratory(2).png" width="400"> <img src ="https://github.com/rohan-kumar1998/Hinglish-Offensive-Tweet-Detection/blob/master/Images/WT/RNN/Screenshot_2019-10-11%20Google%20Colaboratory(3).png" width ="380">
 
-## CNN 
+### CNN 
 We use a convolutional neural network based model as out classifier.This model is an implementation of Yoon Kim et al.[1] We use Binary Cross entropy with logits loss (BCE + Sigmoid) as our loss function and use Adam optimizer as the optimizer, We obtain the following confusion matrix Without Mapping and with mapping respectively. 
 
 <img src="https://github.com/rohan-kumar1998/Hinglish-Offensive-Tweet-Detection/blob/master/Images/WoT/CNN/Screenshot_2019-10-11%20Google%20Colaboratory(3).png" width="415"> <img src ="https://github.com/rohan-kumar1998/Hinglish-Offensive-Tweet-Detection/blob/master/Images/WT/CNN/Screenshot_2019-10-11%20Google%20Colaboratory(3).png" width ="380">
 
-## RNN+GRU Ensemble 
+### RNN+GRU Ensemble 
 We take concatenate the pre-final layers of the above two models, and pass it through a Linear, Maxpool and Linear (in that order) to get the outputs. We use Binary Cross entropy with logits loss (BCE + Sigmoid) as our loss function and use Adam optimizer as the optimizer, We obtain the following confusion matrix Without Mapping and with mapping respectively. 
 
 <img src="https://github.com/rohan-kumar1998/Hinglish-Offensive-Tweet-Detection/blob/master/Images/WoT/RNN_CNN/Screenshot_2019-10-11%20Google%20Colaboratory(3).png" width="400"> <img src ="https://github.com/rohan-kumar1998/Hinglish-Offensive-Tweet-Detection/blob/master/Images/WT/RNN_CNN/Screenshot_2019-10-11%20Google%20Colaboratory(3).png" width ="390"> 
@@ -43,7 +44,7 @@ We take concatenate the pre-final layers of the above two models, and pass it th
 <p align="center"> 
   <img src="https://github.com/rohan-kumar1998/Hinglish-Offensive-Tweet-Detection/blob/master/Images/ENSEMBLE.png"   width="400" >
  <br> 
- Fig - RNN+ GRU architecture 
+ Fig - RNN+GRU architecture 
 </p>
 </div>
                                                                                                                            
