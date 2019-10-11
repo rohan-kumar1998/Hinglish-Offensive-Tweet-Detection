@@ -7,7 +7,7 @@ Order of executing -
 2. main.py
 
 
-| Models        |Without Mapping          | with Mapping  |
+| Models        |Without Mapping          | With Mapping  |
 | ------------- |:-------------:| -----:|
 | Bidirectional GRU      | 80.52 | **82.10** |
 | CNN      | 83.47      |   **84.0** |
