@@ -12,7 +12,6 @@ from torch.autograd import Variable
 import math, copy, time
 import pdb
 from torch.utils.data import Dataset, DataLoader
-from torchtext import data, datasets 
 from torch.nn.utils.rnn import pad_sequence
 
 from gensim.test.utils import datapath, get_tmpfile
