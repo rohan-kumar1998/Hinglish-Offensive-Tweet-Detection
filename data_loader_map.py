@@ -59,6 +59,9 @@ class dataset(Dataset):
         vocab['<sos>'] = 1  
         vocab['<eos>'] = 2  
         idx = 3
+        """
+        We map the hindi profanities and their translation onto the same id and hence the same vector
+        """
         for i in range(len(prof_df)):
             if(prof_df['english'][i] in vocab.keys()):
                 vocab[prof_df['hindi'][i]] = vocab[prof_df['english'][i]]
@@ -105,7 +108,10 @@ def collater(batch):
     new_batch = {'text' : text, 'untext' : untext, 'score' : score, 'label' : label}
     return new_batch
 
-def data_split(df):    
+def data_split(df):  
+    """
+    We divide the dataset into 3 parts, 0.6 for train, 0.1 for val and 0.3 for test
+    """
     train, test = train_test_split(df, test_size=0.4)
     test, val = train_test_split(test, test_size = 0.25)
     return train.reset_index(), val.reset_index(), test.reset_index()
