@@ -6,6 +6,7 @@ Order of executing -
 1. data_cleaner.py
 2. main.py
 
+## Results
 
 | Models        |Without Mapping          | With Mapping  |
 | ------------- |:-------------:| -----:|
@@ -36,7 +37,21 @@ We use a convolutional neural network based model as out classifier.This model i
 
 ## RNN+GRU Ensemble 
 We take concatenate the pre-final layers of the above two models, and pass it through a Linear, Maxpool and Linear (in that order) to get the outputs. We use Binary Cross entropy with logits loss (BCE + Sigmoid) as our loss function and use Adam optimizer as the optimizer, We obtain the following confusion matrix Without Mapping and with mapping respectively. 
+<p align ="right">
+<img src="https://github.com/rohan-kumar1998/Hinglish-Offensive-Tweet-Detection/blob/master/Images/WoT/RNN_CNN/Screenshot_2019-10-11%20Google%20Colaboratory(3).png" width="400"> <img src ="https://github.com/rohan-kumar1998/Hinglish-Offensive-Tweet-Detection/blob/master/Images/WT/RNN_CNN/Screenshot_2019-10-11%20Google%20Colaboratory(3).png" width ="390"> 
+</p>
 
-<img src="https://github.com/rohan-kumar1998/Hinglish-Offensive-Tweet-Detection/blob/master/Images/WoT/RNN_CNN/Screenshot_2019-10-11%20Google%20Colaboratory(3).png" width="400"> <img src ="https://github.com/rohan-kumar1998/Hinglish-Offensive-Tweet-Detection/blob/master/Images/WT/RNN_CNN/Screenshot_2019-10-11%20Google%20Colaboratory(3).png" width ="390">
+<p align="center">
+<div style="text-align:center"> 
+  <img src="https://github.com/rohan-kumar1998/Hinglish-Offensive-Tweet-Detection/blob/master/Images/ENSEMBLE.png"   width="400" >  
+  Fig - RNN+ GRU architecture
+</div>
 
+  <img width="460" height="300" src="http://www.fillmurray.com/460/300">
+</p>
+                                                                                                                           
+                                                                                                                                
+                                                                                                                                
+                                                                                                                                
+                                                                                                                                
 
