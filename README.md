@@ -15,15 +15,4 @@ Order of executing -
 
 *LSTM model was also tested, but wasn't included in the results* 
 
-Pre-requisites - 
-1. Pytorch 1.0 + 
-2. numpy 
-3. pandas 
-4. BeautifulSoup
-5. nltk 
-6. gensim 
-7. sklearn 
-8. tqdm 
-9. seaborn 
-10. matplotlib
-11. collections 
+
