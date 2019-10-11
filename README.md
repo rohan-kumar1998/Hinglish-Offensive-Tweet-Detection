@@ -15,7 +15,15 @@ Order of executing -
 
 *LSTM model was also tested, but wasn't included in the results* 
 
+## Dataset 
+The dataset consisted of two csv files, "HOT_Dataset_modified.csv" which contained the tweet and it's classification as one of the either classes "Not Offensive" (0), "Abusive"(1) or "Hate-Inducing"(2), it contained 3183 data points which were divided into 60% train, 10% validation, and 30% test data. The other "Hinglish_Profanity_List.csv" which contained hindi profanities and their english translation. 
 
+## Mapping 
+We consider 2 cases of mapping (onto a vector space), 
+1. We map the hindi profanities and their translation to two different vectors, and then train the models. 
+2. We map the hindi profanities and their translation to the same vector, and the train the same models. 
+We used GloVe vector space, without freeze the weights, and assigned random weights to the words which weren't in the GloVe vocabulary. 
+ 
 ## Bidirectional GRU 
 We pass the sequence through a bidirectional GRU model, concatenate the last hidden layers (forward and backward pass) then we pass this output through a Linear layer to get the outputs. We use Binary Cross entropy with logits loss (BCE + Sigmoid) as our loss function and use Adam optimizer as the optimizer, We obtain the following confusion matrix Without Mapping and with mapping respectively. 
 
