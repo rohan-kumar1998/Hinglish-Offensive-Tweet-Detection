@@ -23,6 +23,7 @@ The dataset consisted of two csv files, "HOT_Dataset_modified.csv" which contain
 We consider 2 cases of mapping (onto a vector space), 
 1. We map the hindi profanities and their translation to two different vectors, and then train the models. 
 2. We map the hindi profanities and their translation to the same vector, and the train the same models. 
+
 We used GloVe vector space, without freeze the weights, and assigned random weights to the words which weren't in the GloVe vocabulary.
 
 ## Models  
