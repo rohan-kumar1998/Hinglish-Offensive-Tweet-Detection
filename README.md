@@ -45,7 +45,7 @@ We take concatenate the pre-final layers of the above two models, and pass it th
 <p align="center"> 
   <img src="https://github.com/rohan-kumar1998/Hinglish-Offensive-Tweet-Detection/blob/master/Images/ENSEMBLE.png"   width="400" >
  <br> 
- Fig - RNN+GRU architecture 
+ Fig - RNN+CNN architecture 
 </p>
 </div>
 
