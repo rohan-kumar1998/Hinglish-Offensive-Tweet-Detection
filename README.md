@@ -37,7 +37,7 @@ We use a convolutional neural network based model as out classifier.This model i
 
 <img src="https://github.com/rohan-kumar1998/Hinglish-Offensive-Tweet-Detection/blob/master/Images/WoT/CNN/Screenshot_2019-10-11%20Google%20Colaboratory(3).png" width="415"> <img src ="https://github.com/rohan-kumar1998/Hinglish-Offensive-Tweet-Detection/blob/master/Images/WT/CNN/Screenshot_2019-10-11%20Google%20Colaboratory(3).png" width ="380">
 
-### RNN+GRU Ensemble 
+### RNN+CNN Ensemble 
 We take concatenate the pre-final layers of the above two models, and pass it through a Linear, Maxpool and Linear (in that order) to get the outputs. We use Binary Cross entropy with logits loss (BCE + Sigmoid) as our loss function and use Adam optimizer as the optimizer, We obtain the following confusion matrix Without Mapping and with mapping respectively. 
 
 <img src="https://github.com/rohan-kumar1998/Hinglish-Offensive-Tweet-Detection/blob/master/Images/WoT/RNN_CNN/Screenshot_2019-10-11%20Google%20Colaboratory(3).png" width="400"> <img src ="https://github.com/rohan-kumar1998/Hinglish-Offensive-Tweet-Detection/blob/master/Images/WT/RNN_CNN/Screenshot_2019-10-11%20Google%20Colaboratory(3).png" width ="390"> 
